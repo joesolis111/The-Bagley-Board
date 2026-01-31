@@ -1,6 +1,7 @@
-using System;
+using System.Collections;
 using UIAndOthers;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinnerScreen : MonoBehaviour {
    [SerializeField]
@@ -14,5 +15,12 @@ public class WinnerScreen : MonoBehaviour {
       
       var winnerGameObject =  GameObject.FindWithTag("Winner");
       winnerGameObject.GetComponent<SpriteRenderer>().sprite = winnerPlayer == 1 ? _spritePlayer1 : _spritePlayer2;
+
+      StartCoroutine(ReturnToMainGame());
+   }
+
+   public IEnumerator ReturnToMainGame() {
+      yield return new WaitForSeconds(15);
+      SceneManager.LoadScene("MainGame");
    }
 }
