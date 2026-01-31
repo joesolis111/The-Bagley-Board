@@ -3,7 +3,7 @@
     "name": "Player1",
     "maps": [
         {
-            "name": "TakeFork",
+            "name": "TakeLeftFork",
             "id": "1b130efa-e63b-48d8-8177-db68e10757dd",
             "actions": [
                 {
@@ -27,10 +27,27 @@
                     "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "TakeRightFork",
+            "id": "41ca446e-77ef-4614-801e-8149b58039a7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "515c9fc7-2ee8-4514-a3a0-50dd4ea5c995",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
                 {
                     "name": "",
-                    "id": "e4459c78-c1ab-4cce-aedc-7164fd9bf717",
+                    "id": "a3828ba6-a293-4c63-909c-5a4c522acc3c",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",

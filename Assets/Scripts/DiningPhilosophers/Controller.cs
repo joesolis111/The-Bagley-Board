@@ -1,25 +1,32 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
-public class Controller : MonoBehaviour {
-  
-  [SerializeField]
-  private InputActionReference _playerInputActionReference;
-  public void Awake() {
-  }
+namespace DiningPhilosophers {
+  public class Controller : MonoBehaviour {
+    [SerializeField]
+    private InputActionReference takeLeftForkAction;
+    [SerializeField]
+    private InputActionReference _takeRightForkAction;
 
-  private void OnEnable() {
-    throw new NotImplementedException();
-  }
-  
-  private void OnDisable() {
-    throw new NotImplementedException();
-  }
+    private void OnEnable() {
+      takeLeftForkAction.action.Enable();
+      _takeRightForkAction.action.Enable();
 
-  private void TakeLeftFork() {
-    
+      takeLeftForkAction.action.started += TakeLeftFork;
+      _takeRightForkAction.action.started += TakeRightFork;
+    }
+
+    private void OnDisable() {
+      takeLeftForkAction.action.Disable();
+      _takeRightForkAction.action.Disable();
+
+      takeLeftForkAction.action.started -= TakeLeftFork;
+      _takeRightForkAction.action.started -= TakeRightFork;
+    }
+
+    private void TakeLeftFork(InputAction.CallbackContext context) { }
+
+    private void TakeRightFork(InputAction.CallbackContext context) { }
   }
-  
-  
 }
