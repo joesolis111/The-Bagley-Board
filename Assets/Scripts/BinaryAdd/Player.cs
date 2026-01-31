@@ -1,15 +1,13 @@
-using TMPro;
 using UnityEngine;
 
 namespace BinaryAdd {
-  
   public class Player : MonoBehaviour {
-
-    private AdditionManager _manager;
     [SerializeField]
     private int playerNumber;
-    
-    
+
+    private AdditionManager _manager;
+
+
     public void Awake() {
       _manager = GameObject.FindGameObjectWithTag("AdditionManager").GetComponent<AdditionManager>();
     }
@@ -17,6 +15,5 @@ namespace BinaryAdd {
     public void ReadAnswer(string answer) {
       _manager.processAnswer(answer, playerNumber);
     }
-
   }
 }

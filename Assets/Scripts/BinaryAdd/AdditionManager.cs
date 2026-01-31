@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -15,16 +14,16 @@ namespace BinaryAdd {
     [SerializeField]
     private TextMeshProUGUI player2ScoreText;
 
+    private readonly ConvertToBinary _convertToBinary = new();
+
     private (Dictionary<BinaryKeys, string>, Dictionary<BinaryKeys, string>) _currentP1Set;
     private (Dictionary<BinaryKeys, string>, Dictionary<BinaryKeys, string>) _currentP2Set;
-
-    private readonly ConvertToBinary _convertToBinary = new ConvertToBinary();
     private string _input;
 
     public void Awake() {
       _currentP1Set = ResetSet();
       _currentP2Set = ResetSet();
-      
+
       AssignText(1);
       AssignText(2);
     }
@@ -41,29 +40,29 @@ namespace BinaryAdd {
       else {
         _currentP2Set = ResetSet();
       }
-      
+
       AssignText(playerNumber);
     }
 
     public void processAnswer(string answer, int playerNumber) {
       _input = answer;
-      int numAnswer = Int32.Parse(_input);
+      int numAnswer = int.Parse(_input);
 
       bool isPlayer1 = playerNumber == 1;
 
-      bool correct = isPlayer1 ? Int32.Parse(_currentP1Set.Item1[BinaryKeys.DecNumber]) + Int32.Parse(_currentP1Set.Item2[BinaryKeys.DecNumber]) == numAnswer : int.Parse(_currentP2Set.Item1[BinaryKeys.DecNumber]) + int.Parse(_currentP2Set.Item2[BinaryKeys.DecNumber]) == numAnswer;
+      bool correct = isPlayer1 ? int.Parse(_currentP1Set.Item1[BinaryKeys.DecNumber]) + int.Parse(_currentP1Set.Item2[BinaryKeys.DecNumber]) == numAnswer : int.Parse(_currentP2Set.Item1[BinaryKeys.DecNumber]) + int.Parse(_currentP2Set.Item2[BinaryKeys.DecNumber]) == numAnswer;
 
       if (correct) {
         if (isPlayer1) {
           char currentScore = player1ScoreText.text[player1ScoreText.text.Length - 1];
-          player1ScoreText.text = $"Player {playerNumber} Score: {Int32.Parse(currentScore.ToString()) + 1}";
+          player1ScoreText.text = $"Player {playerNumber} Score: {int.Parse(currentScore.ToString()) + 1}";
         }
         else {
           char currentScore = player2ScoreText.text[player2ScoreText.text.Length - 1];
-          player2ScoreText.text = $"Player {playerNumber} Score: {Int32.Parse(currentScore.ToString()) + 1}";
+          player2ScoreText.text = $"Player {playerNumber} Score: {int.Parse(currentScore.ToString()) + 1}";
         }
       }
-      
+
       ResetPlayerSet(playerNumber);
     }
 
