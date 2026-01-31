@@ -1,7 +1,14 @@
-
+using System;
 class Add
 {
-    public static void Add()
+    
+    static Random rnd = new Random();
+    
+    static void Main() {
+        AddFunction();
+    }
+    
+    public static void AddFunction()
     {
         int num1 = GenerateRandomNum();
         int num2 = GenerateRandomNum();
@@ -16,7 +23,6 @@ class Add
     // Generates a random number between 1 and 128
     private static int GenerateRandomNum()
     {
-        Random rnd = new Random();
         return rnd.Next(1, 128);
     }
 
@@ -24,21 +30,23 @@ class Add
     private static string ConvertToBinary(int num)
     {
         string binary = "";
-        while (n > 0)
+        while (num > 0)
         {
-            int bit = n % 2;
-            binary.push_back('0' + bit);
-            n /= 2;
+            int bit = num % 2;
+            binary += bit;
+            num /= 2;
         }
-        reverse(binary.begin(), binary.end());
-        return binary;
+
+        Char[] arr = binary.ToCharArray();
+        Array.Reverse(arr);
+        return new string(arr);
     }
 
     // Adds two binary numbers
     private static string addBinary(string binary1, string binary2)
     {
-        binary1 = trimLeadingZeros(binary1);
-        binary2 = trimLeadingZeros(binary2);
+        binary1 = TrimLeadingZeros(binary1);
+        binary2 = TrimLeadingZeros(binary2);
 
         int n = binary1.size();
         int m = binary2.size();
@@ -80,11 +88,10 @@ class Add
     }
 
     // Need to find the first one, as 0 + 0 is just 0 
-    string trimLeadingZeros(string binary)
+    private static TrimLeadingZeros(string binary)
     {
         int firstOne = binary.IndexOf('1');
         return (firstOne == -1) ? "0" : binary.Substring(firstOne);
     }
     
 }
-
