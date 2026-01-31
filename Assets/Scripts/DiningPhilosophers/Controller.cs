@@ -2,13 +2,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace DiningPhilosophers {
-  
   public class Controller : MonoBehaviour {
     [SerializeField]
     private InputActionReference takeLeftForkAction;
     [SerializeField]
     private InputActionReference takeRightForkAction;
-    [SerializeField] 
+    [SerializeField]
     private InputActionReference changeToPhilosopher1Action;
     [SerializeField]
     private InputActionReference changeTPhilosopher2Action;
@@ -16,16 +15,16 @@ namespace DiningPhilosophers {
     private GameObject _philosopher1;
     [SerializeField]
     private GameObject _philosopher2;
-    
+    private bool _isPhilosopher1 = true;
+
     private Philosopher _philosopher1Script;
     private Philosopher _philosopher2Script;
-    private bool _isPhilosopher1 = true;
 
     public void Awake() {
       _philosopher1Script = _philosopher1.GetComponent<Philosopher>();
       _philosopher2Script = _philosopher2.GetComponent<Philosopher>();
     }
-    
+
     private void OnEnable() {
       takeLeftForkAction.action.Enable();
       takeRightForkAction.action.Enable();
@@ -67,7 +66,7 @@ namespace DiningPhilosophers {
         _philosopher2Script.TakeRightFork();
       }
     }
-    
+
     private void ChangeToPhilosopher1(InputAction.CallbackContext context) {
       _isPhilosopher1 = true;
     }

@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenu : MonoBehaviour {
-  
-  private UIDocument _uidoc;
   private Button _mainMenuButton;
-  
+
+  private UIDocument _uidoc;
+
   public void Awake() {
-  _uidoc = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<UIDocument>();
-  
-  _mainMenuButton = _uidoc.rootVisualElement.Q<Button>("mainMenuButton");
+    _uidoc = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<UIDocument>();
+
+    _mainMenuButton = _uidoc.rootVisualElement.Q<Button>("mainMenuButton");
   }
 
   public void OnEnable() {
@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour {
   public void OnDisable() {
     _mainMenuButton.UnregisterCallback<ClickEvent>(LoadScene);
   }
-  
+
   public void LoadScene(ClickEvent e) {
     SceneManager.LoadScene("MainGame");
   }
