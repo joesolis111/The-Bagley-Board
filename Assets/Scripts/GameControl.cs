@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class gameControl : MonoBehaviour
+public class GameControl : MonoBehaviour
 {
     
 }

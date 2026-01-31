@@ -7,6 +7,7 @@ public class diceRoll : MonoBehaviour{
     private SpriteRenderer rend;
     private int whosTurn = 1;
     private bool coroutineAllowed = true;
+    private GameControl gameControl;
 
     private void Start() {
         rend = GetComponent<SpriteRenderer>();
@@ -15,6 +16,8 @@ public class diceRoll : MonoBehaviour{
         
         if (diceSides.Length > 0)
             rend.sprite = diceSides[5];
+
+        gameControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControl>();
     }
 
 
