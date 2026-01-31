@@ -18,6 +18,7 @@ namespace BinaryAdd {
 
     private (Dictionary<BinaryKeys, string>, Dictionary<BinaryKeys, string>) _currentP1Set;
     private (Dictionary<BinaryKeys, string>, Dictionary<BinaryKeys, string>) _currentP2Set;
+
     private string _input;
 
     public void Awake() {
@@ -46,7 +47,7 @@ namespace BinaryAdd {
 
     public void processAnswer(string answer, int playerNumber) {
       _input = answer;
-      int numAnswer = int.Parse(_input);
+      int numAnswer = int.Parse(answer);
 
       bool isPlayer1 = playerNumber == 1;
 

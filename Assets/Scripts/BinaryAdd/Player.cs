@@ -6,8 +6,7 @@ namespace BinaryAdd {
     private int playerNumber;
 
     private AdditionManager _manager;
-
-
+    
     public void Awake() {
       _manager = GameObject.FindGameObjectWithTag("AdditionManager").GetComponent<AdditionManager>();
     }
