@@ -1,0 +1,63 @@
+{
+    "version": 1,
+    "name": "Player2",
+    "maps": [
+        {
+            "name": "TakeLeftFork",
+            "id": "eaf610be-b911-41b3-b9aa-cc79ee2d349d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "f4d617e2-8e0e-4499-a5be-e4c05f22bcc6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1f5e6b46-a492-400e-838c-ceab8cd48846",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TakeRightFork",
+            "id": "cf35753e-56bd-483d-ac62-a537c825ca91",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "6f7385d6-bbee-4577-acfc-1019aaa172e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f20a3816-4835-472b-b052-30f9194cf613",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
