@@ -1,6 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Root" style="flex-grow: 1;">
-        <ui:Label text="The Bagley Board&#10;" style="justify-content: center; align-content: center; align-items: center; align-self: center; font-size: 40px;" />
-        <ui:Button text="Start Game&#10;" name="mainMenuButton" />
-    </ui:VisualElement>
-</ui:UXML>
