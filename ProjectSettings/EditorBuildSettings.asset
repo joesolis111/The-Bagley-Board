@@ -14,6 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 71a2404b098b3a249bbb521c6457b05a
+  - enabled: 1
+    path: Assets/Scenes/WinnerScreen.unity
+    guid: 3cab784f7bac99c418251db07035f471
+  - enabled: 1
+    path: Assets/Scenes/DiningPhilosophers.unity
+    guid: 8d8bc858b0ee4f046a2100e1df85878c
+  - enabled: 1
+    path: Assets/Scenes/BinaryAddition.unity
+    guid: 509c7ee64c9f2e542aba9a806abb49f4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
