@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - MainMenu
+  - AdditionManager
   layers:
   - Default
   - TransparentFX
