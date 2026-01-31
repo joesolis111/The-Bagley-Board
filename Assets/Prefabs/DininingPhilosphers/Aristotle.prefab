@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431024664137671917}
   - component: {fileID: 7078639942573600038}
+  - component: {fileID: 4351302123505350228}
   m_Layer: 0
   m_Name: Aristotle
   m_TagString: Untagged
@@ -90,3 +91,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4351302123505350228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2963648964017919200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7da595195474f578f7e355162f0e28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiningPhilosophers.Philosopher
+  firstFork: {fileID: 0}
+  secondFork: {fileID: 0}

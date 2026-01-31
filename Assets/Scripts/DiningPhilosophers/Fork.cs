@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 namespace DiningPhilosophers {
@@ -19,7 +21,13 @@ namespace DiningPhilosophers {
       }
     }
 
-    public void TakeFork() {
+    public void TakeFork(TextMeshProUGUI scoreText, int playerNumber) {
+
+      if (_taken) {
+        return;
+      }
+
+      scoreText.text = $"Player {playerNumber} Score: {Int32.Parse(scoreText.text[scoreText.text.Length - 1].ToString()) + 1}";
       _taken = true;
       StartCoroutine(StartTimer());
     }

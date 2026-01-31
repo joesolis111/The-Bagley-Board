@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace DiningPhilosophers {
@@ -8,6 +9,12 @@ namespace DiningPhilosophers {
     [SerializeField]
     private GameObject secondFork;
     
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    
+    [SerializeField]
+    private int _belongsToPlayer;
+    
     private Fork _leftForkScript;
     private Fork _rightForkScript;
 
@@ -17,11 +24,11 @@ namespace DiningPhilosophers {
     }
     
     public void TakeLeftFork() {
-      _leftForkScript.TakeFork();
+      _leftForkScript.TakeFork(scoreText, _belongsToPlayer);
     }
 
     public void TakeRightFork() {
-      _rightForkScript.TakeFork();
+      _rightForkScript.TakeFork(scoreText, _belongsToPlayer);
     }
 
   }
