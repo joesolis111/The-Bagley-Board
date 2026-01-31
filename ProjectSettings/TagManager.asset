@@ -6,6 +6,8 @@ TagManager:
   tags:
   - MainMenu
   - AdditionManager
+  - Winner
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
