@@ -1,0 +1,119 @@
+{
+    "version": 1,
+    "name": "Player1",
+    "maps": [
+        {
+            "name": "TakeLeftFork",
+            "id": "1b130efa-e63b-48d8-8177-db68e10757dd",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "c2d6e733-293c-43ea-98ee-5c8fa483d2ed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f7e68699-c658-450e-960c-b7815632d8f3",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "TakeRightFork",
+            "id": "41ca446e-77ef-4614-801e-8149b58039a7",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "515c9fc7-2ee8-4514-a3a0-50dd4ea5c995",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a3828ba6-a293-4c63-909c-5a4c522acc3c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ChangeToPhilosopher1",
+            "id": "b089b586-467f-41cf-a0a2-08eb98a33704",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "a4e9eba5-3740-4213-b363-bd652569988a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "62070703-2503-47bd-a9b4-7d2a6e069c84",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ChangeToPhilosopher2",
+            "id": "6a43d430-19b4-402e-8f36-8793fdd20abf",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "27b90bb5-b559-4c19-bb16-5869ec1b1925",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "52e50143-70e9-4d87-83bf-d8023132c70a",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

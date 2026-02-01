@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Player1
-  - Player2
+  - MainMenu
+  - AdditionManager
+  - Winner
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
