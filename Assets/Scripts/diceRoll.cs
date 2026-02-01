@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class diceRoll : MonoBehaviour{
+public class diceRoll : MonoBehaviour {
 
     private Sprite[] diceSides;
     private SpriteRenderer rend;
@@ -18,13 +18,35 @@ public class diceRoll : MonoBehaviour{
             rend.sprite = diceSides[5];
 
         gameControl = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControl>();
-    }
+}
 
 
-    private void OnMouseDown(){
-        if (!GameControl.gameOver && coroutineAllowed)
-            StartCoroutine("RollTheDice"); 
+private void Update() {
+    if (Input.GetMouseButtonDown(0)) {
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+        if (hit.collider != null && hit.collider.gameObject == gameObject) {
+            Debug.Log("Clicked on the GameObject.");
+        }
     }
+}
+
+
+
+private void OnMouseDown(){
+    Debug.Log("The Dice was clicked!");
+
+    if (!GameControl.gameOver && coroutineAllowed)
+    {
+        Debug.Log("Conditions met: Starting Coroutine...");
+        StartCoroutine("RollTheDice"); 
+    }
+    else
+    {
+        Debug.Log("Click ignored. GameOver: " + GameControl.gameOver + ", CoroutineAllowed: " + coroutineAllowed);
+    }
+}
 
     private IEnumerator RollTheDice(){
         coroutineAllowed = false;
